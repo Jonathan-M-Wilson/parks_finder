@@ -1,0 +1,10 @@
+<h2>Total Park Results: <%=@parks.size %></h2>
+
+<% @parks.each do |park| %>
+  <section class='park'>
+    <h2 class='name'><% park[:fullName] %></h2>
+    <h2 class='description'><% park[:description] %></h2>
+    <h2 class='directions'><% park[:directionsInfo] %></h2>
+    <h2 class='hours'><% park[:operatingHours] %></h2>
+  </section>
+<% end %>
