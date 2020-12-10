@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe 'As a user,', type: :feature do
-  describe 'When I select "Tennessee" from the form and click on "Find Parks"' do
+  describe 'When I select "Tennessee" from the form and click on "Find Parks"', :vcr do
     before :each do
       visit root_path
       select 'Tennessee', from: :state
