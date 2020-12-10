@@ -2,9 +2,9 @@
 
 <% @parks.each do |park| %>
   <section class='park'>
-    <h2 class='name'><% park[:fullName] %></h2>
-    <h2 class='description'><% park[:description] %></h2>
-    <h2 class='directions'><% park[:directionsInfo] %></h2>
-    <h2 class='hours'><% park[:operatingHours] %></h2>
+    <h2 class='name'><% park.name %></h2>
+    <h2 class='description'><% park.description %></h2>
+    <h2 class='directions'><% park.directions %></h2>
+    <h2 class='hours'><% park.hours %></h2>
   </section>
 <% end %>
