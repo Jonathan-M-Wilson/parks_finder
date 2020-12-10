@@ -2,7 +2,9 @@ class ParksController < ApplicationController
 
   def index
     state_park = get_json("/api/v1/parks?q=#{params[:state]}")
-    @parks = state_park[:data]
+    @parks = state_park[:data].map do |park_data|
+      Park.new(park_data)
+    end
   end
 
   private
